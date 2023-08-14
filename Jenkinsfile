@@ -31,9 +31,9 @@ pipeline {
          aws configure set aws_secret_access_key $secret_key
          aws configure set default.region us-east-2
          DOCKER_LOGIN_PASSWORD=$(aws ecr get-login-password  --region us-east-2)
-         docker login -u AWS -p $DOCKER_LOGIN_PASSWORD 579621469191.dkr.ecr.us-east-2.amazonaws.com
-	 docker build -t 579621469191.dkr.ecr.us-east-2.amazonaws.com/mani:SAMPLE-PROJECT-${BUILD_NUMBER} .
-	 docker push 579621469191.dkr.ecr.us-east-2.amazonaws.com/mani:SAMPLE-PROJECT-${BUILD_NUMBER}
+         docker login -u AWS -p $DOCKER_LOGIN_PASSWORD 375462730209.dkr.ecr.us-east-2.amazonaws.com
+	 docker build -t 375462730209.dkr.ecr.us-east-2.amazonaws.com/mani:SAMPLE-PROJECT-${BUILD_NUMBER} .
+	 docker push 375462730209.dkr.ecr.us-east-2.amazonaws.com/mani:SAMPLE-PROJECT-${BUILD_NUMBER}
           
 	  '''
      }   
